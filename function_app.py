@@ -18,7 +18,7 @@ def get_connection():
             "TrustServerCertificate=no;"
             "Connection Timeout=30;"
         )"""""
-        conn_string= "Driver={ODBC Driver 18 for SQL Server};Server=tcp:da-2025-07.database.windows.net,1433;Database=data;Uid=edoardo;Pwd=AlfaDelta25;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+        conn_string= "Driver={ODBC Driver 18 for SQL Server};Server=yourserver;Database=yourdatabase;Uid=yourid;Pwd=yourpwd;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
         return pyodbc.connect(conn_string)
     except pyodbc.Error as e:
         logging.error(f"Errore di connessione al database: {e}")
